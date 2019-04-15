@@ -1,6 +1,6 @@
 <template>
     <div class="flex h-screen">
-        <div class="hidden md:block md:w-48 bg-gradient-grey-darkest">
+        <div :class="['hidden md:block md:w-48', sidebarClasses]">
             <div class="h-16 bg-black flex items-center justify-center text-grey shadow border-b-4 border-grey-darker">
                 <slot name="header-logo">Logo</slot>
             </div>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="container p-8">
-                <slot name="content"></slot>
+                <slot></slot>
             </div>
         </div>
     </div>
@@ -64,7 +64,13 @@
 
 <script>
 export default {
-  name: 'client'
+  name: 'client',
+  props: {
+    sidebarClasses: {
+      type: Array,
+      default: () => (['bg-grey-darkest'])
+    }
+  }
 }
 </script>
 

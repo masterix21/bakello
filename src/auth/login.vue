@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST" action="../client.html">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <label class="block text-grey-darker text-sm font-bold">
                     Username
@@ -18,13 +18,13 @@
                 <p class="text-red text-xs italic">Please choose a password.</p>
             </div>
             <div class="flex items-center justify-between">
-                <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" @click="login()">
                     Sign In
                 </button>
-                <a class="inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline"
-                   href="password.html">
+                <router-link class="inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline"
+                   :to="resetUrl">
                     Forgot Password?
-                </a>
+                </router-link>
             </div>
         </form>
         <slot name="footer">
@@ -34,16 +34,23 @@
 </template>
 
 <script>
-    export default {
-        name: "bklo-login",
-        props: {
-            loginUrl: { type: String, value: '' },
-            resetUrl: String,
-            submit: Promise
-        },
-        data: () => ({
-            username: null,
-            password: null,
-        }),
+export default {
+  name: 'bklo-login',
+  props: {
+    loginUrl: { type: String, value: '' },
+    resetUrl: String,
+    submit: Function
+  },
+  data: () => ({
+    username: null,
+    password: null
+  }),
+  methods: {
+    login () {
+      this.submit().then(success => {
+        this.$router.push('Client')
+      })
     }
+  }
+}
 </script>

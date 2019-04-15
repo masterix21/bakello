@@ -16,10 +16,9 @@
                         type="submit">
                     Reset password
                 </button>
-                <a class="inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline"
-                   href="login.html">
+                <router-link class="inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline" :to="this.loginUrl">
                     Login
-                </a>
+                </router-link>
             </div>
         </form>
         <slot name="footer">
@@ -29,9 +28,14 @@
 </template>
 
 <script>
-    export default {
-        name: "bklo-password",
-    }
+export default {
+  name: 'bklo-password',
+  props: {
+    loginUrl: { type: String, value: '' },
+    resetUrl: String,
+    submit: Function
+  }
+}
 </script>
 
 <style scoped>
