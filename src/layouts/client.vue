@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: 'client',
+  name: 'bklo-layouts-client',
   props: {
     sidebarClasses: {
       type: Array,

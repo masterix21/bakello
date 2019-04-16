@@ -6,7 +6,7 @@
 
 <script>
 import BkloLayoutsPanelCenter from '../../src/layouts/panel-center'
-import BkloLogin from '../../src/auth/login'
+import BkloLogin from '../../src/components/auth/login'
 
 export default {
   name: 'Login',
@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     login () {
-      return new Promise((resolve, reject) => {
+      return new Promise(resolve => {
         resolve()
       })
     }

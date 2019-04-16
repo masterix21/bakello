@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import LayoutClient from '@/layouts/client'
+import LayoutClient from '../pages/Client';
 import PageLogin from '../pages/Login'
 import PagePassword from '../pages/Password'
 

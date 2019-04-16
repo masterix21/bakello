@@ -6,7 +6,7 @@
 
 <script>
 import BkloLayoutsPanelCenter from '../../src/layouts/panel-center'
-import BkloPassword from '../../src/auth/password'
+import BkloPassword from '../../src/components/auth/password'
 
 export default {
   name: 'Password',

@@ -8,7 +8,14 @@
 ## Props
 | Name | Type | Default | Required | Description |
 |------|------|---------|----------|-------------|
+| usernameLabel | string | Username | no | Username field label |
+| usernameEmpty | string | Username | no | Username field placeholder |
+| passwordLabel | string | Password | no | Password field label |
+| passwordEmpty | string | ******** | no | Password field placeholder |
+| emptyFieldText | string | Field required. | no | Validation message shown when** a field is empty |
+| loginText | string | Sign In | no | Login button text |
 | loginUrl | string | null | no | Login POST url. If null, it will use standard Laravel login route |
+| resetText | string | Forgot Password? | no | Lost password link text |
 | resetUrl | string | null | no | Password lost url. If null, it will use standard Laravel password reset route |
 | submit | Promise | null | no | Override component login submit function. |
 

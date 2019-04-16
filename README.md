@@ -1,6 +1,6 @@
-# backello
+# Bakello
 
-> Backello: yet another backend panel
+> Yet another backend panel
 
 ## Build Setup
 
