@@ -9,16 +9,14 @@
 </template>
 
 <script>
-    import BkloPassword from "../../components/auth/password";
+import BkloPassword from '../../components/auth/password';
 
-    export default {
-        name: "bklo-pages-password",
-        components: {
-            BkloPassword
-        },
-    }
+export default {
+    name: 'bklo-pages-password',
+    components: {
+        BkloPassword,
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.js -o dev/styles.css"
+    "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.js -o dev/styles.css",
+    "format": "prettier --config ./.prettierrc --write 'src/**/*.{css,js,vue}'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",

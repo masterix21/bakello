@@ -1,9 +1,9 @@
 <template>
-  <p class="text-center text-grey-darker text-xs">©2019 Bakello. All rights reserved.</p>
+    <p class="text-center text-grey-darker text-xs">©2019 Bakello. All rights reserved.</p>
 </template>
 
 <script>
 export default {
-  name: 'bklo-copyright-footer',
-}
+    name: 'bklo-copyright-footer',
+};
 </script>

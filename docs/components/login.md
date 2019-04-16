@@ -9,8 +9,10 @@
 | Name | Type | Default | Required | Description |
 |------|------|---------|----------|-------------|
 | usernameLabel | string | Username | no | Username field label |
+| usernameField | string | username | no | Username field name for submit data object |
 | usernameEmpty | string | Username | no | Username field placeholder |
 | passwordLabel | string | Password | no | Password field label |
+| passwordField | string | password | no | Password field name for submit data object |
 | passwordEmpty | string | ******** | no | Password field placeholder |
 | emptyFieldText | string | Field required. | no | Validation message shown when** a field is empty |
 | loginText | string | Sign In | no | Login button text |

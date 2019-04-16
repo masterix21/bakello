@@ -9,19 +9,19 @@
 </template>
 
 <script>
-    import BkloLogin from "../../components/auth/login";
+import BkloLogin from '../../components/auth/login';
 
-    export default {
-        name: "bklo-pages-login",
-        components: {BkloLogin},
-        props: {
-            loginUrl: { type: String, value: '' },
-            resetUrl: String,
-            submit: Promise
-        },
-        data: () => ({
-            username: null,
-            password: null,
-        }),
-    }
+export default {
+    name: 'bklo-pages-login',
+    components: { BkloLogin },
+    props: {
+        loginUrl: { type: String, value: '' },
+        resetUrl: String,
+        submit: Promise,
+    },
+    data: () => ({
+        username: null,
+        password: null,
+    }),
+};
 </script>

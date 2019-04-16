@@ -9,16 +9,14 @@
 </template>
 
 <script>
-    import BkloPasswordReset from "../../components/auth/password-reset";
+import BkloPasswordReset from '../../components/auth/password-reset';
 
-    export default {
-        name: "bklo-pages-password-reset",
-        components: {
-            BkloPasswordReset,
-        },
-    }
+export default {
+    name: 'bklo-pages-password-reset',
+    components: {
+        BkloPasswordReset,
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
