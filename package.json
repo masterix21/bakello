@@ -9,6 +9,8 @@
     "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.js -o dev/styles.css"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "lodash": "^4.17.11",
     "tailwindcss": "^0.7.4",
@@ -19,10 +21,12 @@
     "@vue/cli-plugin-eslint": "^3.6.0",
     "@vue/cli-service": "^3.6.0",
     "babel-eslint": "^10.0.1",
+    "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-router": "^3.0.3",
+    "sass-loader": "^7.1.0",
     "tailwindcss-gradients": "^1.1.0",
+    "vue-router": "^3.0.3",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
