@@ -2,10 +2,23 @@
     <div>
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
-                <bklo-components-form-element :label="usernameLabel" v-model="username" :placeholder="usernameEmpty" :validator="$v.username" @input="$v.username.$touch()" />
+                <bklo-components-form-element
+                    :label="usernameLabel"
+                    v-model="username"
+                    :placeholder="usernameEmpty"
+                    :validator="$v.username"
+                    @input="$v.username.$touch()"
+                />
             </div>
             <div class="mb-6">
-                <bklo-components-form-element type="password" :label="passwordLabel" v-model="password" :placeholder="passwordEmpty" :validator="$v.password" @input="$v.password.$touch()" />
+                <bklo-components-form-element
+                    type="password"
+                    :label="passwordLabel"
+                    v-model="password"
+                    :placeholder="passwordEmpty"
+                    :validator="$v.password"
+                    @input="$v.password.$touch()"
+                />
             </div>
             <div class="flex items-center justify-between">
                 <button
@@ -38,7 +51,7 @@ import BkloComponentsFormElement from '../form/Element';
 export default {
     name: 'bklo-login',
     components: { BkloComponentsFormElement, BkloCopyrightFooter },
-    mixins: [ validationMixin ],
+    mixins: [validationMixin],
     props: {
         usernameLabel: { type: String, default: 'Username' },
         usernameField: { type: String, default: 'username' },
@@ -48,15 +61,18 @@ export default {
         passwordEmpty: { type: String, default: '********' },
         emptyFieldText: { type: String, default: 'Field required.' },
         loginText: { type: String, default: 'Sign In' },
-        loginUrl: { type: String, default: null },
+        loginUrl: { type: String, default: '/login' },
         resetText: { type: String, default: 'Forgot Password?' },
         resetUrl: { type: String, default: null },
         submit: { type: Function, default: null },
         hideFooter: { type: Boolean, default: false },
-        validations: { type: Object, default: () => ({
-            username: { required },
-            password: { required },
-        })}
+        validations: {
+            type: Object,
+            default: () => ({
+                username: { required },
+                password: { required },
+            }),
+        },
     },
     data: () => ({
         username: null,
@@ -78,7 +94,7 @@ export default {
             if (typeof this.submit === 'function') {
                 ret = this.submit(data);
             } else {
-                ret = axios.post('/login', data);
+                ret = axios.post(this.loginUrl, data);
             }
 
             ret.then(response => {

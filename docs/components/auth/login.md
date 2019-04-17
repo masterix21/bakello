@@ -16,7 +16,7 @@
 | passwordEmpty | string | ******** | no | Password field placeholder. |
 | emptyFieldText | string | Field required. | no | Validation message shown when** a field is empty. |
 | loginText | string | Sign In | no | Login button text. |
-| loginUrl | string | null | no | Login POST url. If null, it will use standard Laravel login route. |
+| loginUrl | string | /login | no | Login POST url: it will use standard Laravel login route by default. |
 | resetText | string | Forgot Password? | no | Lost password link text. |
 | resetUrl | string | null | no | Password lost url. If null, it will use standard Laravel password reset route. |
 | submit | Promise | null | no | Override component login submit function. |
