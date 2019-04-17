@@ -4,6 +4,9 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate);
+
 import vuelidateErrorExtractor from "vuelidate-error-extractor";
 Vue.use(vuelidateErrorExtractor);
 

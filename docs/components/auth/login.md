@@ -19,6 +19,8 @@
 | loginUrl | string | /login | no | Login POST url: it will use standard Laravel login route by default. |
 | resetText | string | Forgot Password? | no | Lost password link text. |
 | resetUrl | string | null | no | Password lost url. If null, it will use standard Laravel password reset route. |
+| submitClass | string, object | null | no | Submit button class |
+| resetClass | string, object | null | no | Reset password link class |
 | submit | Promise | null | no | Override component login submit function. |
 | hideFooter | bool | false | no | Hide the component footer. |
 | validations | object | { username: { required }, password: { required } } | no | Validate model using Vuelidate |

@@ -3,8 +3,8 @@
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <bklo-components-form-element
-                    :label="usernameLabel"
                     v-model="username"
+                    :label="usernameLabel"
                     :placeholder="usernameEmpty"
                     :validator="$v.username"
                     @input="$v.username.$touch()"
@@ -22,13 +22,14 @@
             </div>
             <div class="flex items-center justify-between">
                 <button
-                    class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    :class="['bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline', {'opacity-50 cursor-not-allowed': invalidForm}, ...submitClass]"
+                    :disabled="invalidForm"
                     @click="login()"
                 >
                     {{ loginText }}
                 </button>
                 <router-link
-                    class="inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline"
+                    :class="['inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline', ...resetClass]"
                     :to="resetUrl"
                 >
                     {{ resetText }}
@@ -44,14 +45,12 @@
 <script>
 import axios from 'axios';
 import BkloCopyrightFooter from '../CopyrightFooter';
-import { validationMixin } from 'vuelidate';
 import { required } from 'vuelidate/lib/validators';
 import BkloComponentsFormElement from '../form/Element';
 
 export default {
-    name: 'bklo-login',
+    name: 'bklo-components-auth-login',
     components: { BkloComponentsFormElement, BkloCopyrightFooter },
-    mixins: [validationMixin],
     props: {
         usernameLabel: { type: String, default: 'Username' },
         usernameField: { type: String, default: 'username' },
@@ -64,6 +63,8 @@ export default {
         loginUrl: { type: String, default: '/login' },
         resetText: { type: String, default: 'Forgot Password?' },
         resetUrl: { type: String, default: null },
+        submitClass: { type: [ String, Object ], default: null },
+        resetClass: { type: [ String, Object ], default: null },
         submit: { type: Function, default: null },
         hideFooter: { type: Boolean, default: false },
         validations: {
@@ -74,6 +75,11 @@ export default {
             }),
         },
     },
+    computed: {
+        invalidForm() {
+            return this.$v.$invalid || this.$v.$error;
+        }
+    },
     data: () => ({
         username: null,
         password: null,
@@ -83,6 +89,11 @@ export default {
     },
     methods: {
         login() {
+            if (this.invalidForm) {
+                this.emit('onFails');
+                return;
+            }
+
             let ret;
 
             let data = {};
