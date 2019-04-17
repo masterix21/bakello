@@ -7,6 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.js -o dev/styles.css",
+    "docs-dev": "vuepress dev docs",
+    "docs-build": "vuepress build docs",
     "format": "prettier --config ./.prettierrc --write 'src/**/*.{css,js,vue}'"
   },
   "dependencies": {
@@ -15,7 +17,9 @@
     "core-js": "^2.6.5",
     "lodash": "^4.17.11",
     "tailwindcss": "^0.7.4",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vuelidate": "^0.7.4",
+    "vuelidate-error-extractor": "^2.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",

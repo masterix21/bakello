@@ -1,6 +1,6 @@
-# Password change component
+# Auth - Password component
 
-> This is the component that implements the password change UI and logic. 
+> This is the component that implements the password reset UI and logic. 
 
 ## Examples
 
