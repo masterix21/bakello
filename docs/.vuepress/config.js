@@ -22,6 +22,7 @@ module.exports = {
                     ['/components/auth/password', 'Auth - Password reset'],
                     ['/components/auth/password-change', 'Auth - Password change'],
                     ['/components/form/element', 'Form - Element'],
+                    ['/components/menu/user', 'Menu - Header User'],
                 ]
             },
             {
