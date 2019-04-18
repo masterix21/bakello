@@ -35,7 +35,12 @@
             </div>
 
             <button
-                class="bg-blue w-full hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                :class="[
+                    'bg-blue w-full hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+                    { 'opacity-50 cursor-not-allowed': invalidForm },
+                    ...submitClass,
+                ]"
+                :disabled="invalidForm"
                 @click="changePassword"
             >
                 {{ changeText }}
@@ -69,6 +74,7 @@ export default {
         changeText: { type: String, default: 'Change your password' },
         changeUrl: { type: String, default: '/password/change' },
         submit: { type: Function, default: null },
+        submitClass: { type: [String, Object], default: null },
         hideFooter: { type: Boolean, default: false },
         validations: {
             type: Object,
@@ -95,7 +101,7 @@ export default {
     methods: {
         changePassword() {
             if (this.invalidForm) {
-                this.emit('onFails');
+                this.$emit('onFails');
                 return;
             }
 

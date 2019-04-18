@@ -15,6 +15,7 @@
                     :class="[
                         'bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
                         { 'opacity-50 cursor-not-allowed': invalidForm },
+                        ...submitClass,
                     ]"
                     :disabled="invalidForm"
                     @click="resetPassword()"
@@ -22,7 +23,10 @@
                     {{ resetText }}
                 </button>
                 <router-link
-                    class="inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline"
+                    :class="[
+                        'inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline',
+                        ...loginClass,
+                    ]"
                     :to="this.loginUrl"
                 >
                     {{ loginText }}
@@ -52,6 +56,8 @@ export default {
         resetUrl: { type: String, default: '/password/reset' },
         loginText: { type: String, default: 'Sign In' },
         loginUrl: { type: String, default: '/login' },
+        submitClass: { type: [String, Object], default: null },
+        loginClass: { type: [String, Object], default: null },
         submit: { type: Function, default: null },
         hideFooter: { type: Boolean, default: false },
         validations: {
@@ -75,7 +81,7 @@ export default {
     methods: {
         resetPassword() {
             if (this.invalidForm) {
-                this.emit('onFails');
+                this.$emit('onFails');
                 return;
             }
 

@@ -97,7 +97,7 @@ export default {
     methods: {
         login() {
             if (this.invalidForm) {
-                this.emit('onFails');
+                this.$emit('onFails');
                 return;
             }
 
