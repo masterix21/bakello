@@ -52,7 +52,7 @@
 import BkloCopyrightFooter from '../CopyrightFooter';
 
 export default {
-    name: 'bklo-password-reset',
+    name: 'bklo-password-change',
     components: { BkloCopyrightFooter },
 };
 </script>

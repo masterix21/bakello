@@ -1,10 +1,11 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 import LayoutClient from '../pages/Client';
-import PageLogin from '../pages/Login'
-import PagePassword from '../pages/Password'
+import PageLogin from '../pages/Login';
+import PagePassword from '../pages/Password';
+import PagePasswordChange from '../pages/PasswordChange';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -17,6 +18,11 @@ export default new Router({
       path: '/password',
       name: 'Password',
       component: PagePassword
+    },
+    {
+      path: '/password-change',
+      name: 'Password change',
+      component: PagePasswordChange
     },
     {
       path: '/client',
