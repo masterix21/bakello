@@ -1,6 +1,6 @@
 <template>
     <BkloLayoutsPanelCenter>
-        <BkloPassword :reset-url="'/password-change'" :submit="submit" @onSubmit="$router.push('/password-change')"></BkloPassword>
+        <BkloPassword :reset-url="'/password-change'" :login-url="'/'" :submit="submit" @onSubmit="$router.push('/password-change')"></BkloPassword>
     </BkloLayoutsPanelCenter>
 </template>
 
@@ -23,7 +23,3 @@
         },
     };
 </script>
-
-<style scoped>
-
-</style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST" onsubmit="return false;">
             <div class="mb-2">
                 <bklo-components-form-element
                     v-model="username"
