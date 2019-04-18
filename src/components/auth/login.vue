@@ -1,7 +1,7 @@
 <template>
     <div>
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
+            <div class="mb-2">
                 <bklo-components-form-element
                     v-model="username"
                     :label="usernameLabel"
@@ -10,7 +10,7 @@
                     @input="$v.username.$touch()"
                 />
             </div>
-            <div class="mb-6">
+            <div class="mb-2">
                 <bklo-components-form-element
                     type="password"
                     :label="passwordLabel"
@@ -22,14 +22,21 @@
             </div>
             <div class="flex items-center justify-between">
                 <button
-                    :class="['bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline', {'opacity-50 cursor-not-allowed': invalidForm}, ...submitClass]"
+                    :class="[
+                        'bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+                        { 'opacity-50 cursor-not-allowed': invalidForm },
+                        ...submitClass,
+                    ]"
                     :disabled="invalidForm"
                     @click="login()"
                 >
                     {{ loginText }}
                 </button>
                 <router-link
-                    :class="['inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline', ...resetClass]"
+                    :class="[
+                        'inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline',
+                        ...resetClass,
+                    ]"
                     :to="resetUrl"
                 >
                     {{ resetText }}
@@ -63,8 +70,8 @@ export default {
         loginUrl: { type: String, default: '/login' },
         resetText: { type: String, default: 'Forgot Password?' },
         resetUrl: { type: String, default: null },
-        submitClass: { type: [ String, Object ], default: null },
-        resetClass: { type: [ String, Object ], default: null },
+        submitClass: { type: [String, Object], default: null },
+        resetClass: { type: [String, Object], default: null },
         submit: { type: Function, default: null },
         hideFooter: { type: Boolean, default: false },
         validations: {
@@ -78,7 +85,7 @@ export default {
     computed: {
         invalidForm() {
             return this.$v.$invalid || this.$v.$error;
-        }
+        },
     },
     data: () => ({
         username: null,
