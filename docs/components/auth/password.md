@@ -3,7 +3,9 @@
 > This is the component that implements the password reset UI and logic. 
 
 ## Examples
-@TODO
+```vue
+<bklo-components-auth-password @onSuccess="alert('Please check your mailbox!')" />
+```
 
 ## Props
 | Name | Type | Default | Required | Description |
@@ -26,7 +28,7 @@
 | onSubmit | data | Called when the submit button is clicked and there are no validation errors. |
 | onInvalid | errors | Fired when the reset process can't start for login validation errors. |
 | onFails | errors | Fired when the reset process fails. |
-| onResetted | data | Fired when the reset process succeded. |
+| onSuccess | data | Fired when the reset process succeded. |
 
 ## Slots
 | Name | Description |

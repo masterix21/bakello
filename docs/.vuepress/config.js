@@ -16,6 +16,7 @@ module.exports = {
             '/',
             {
                 title: 'Components',
+                collapsable: false,
                 children: [
                     ['/components/', 'Introduction'],
                     ['/components/auth/login', 'Auth - Login'],

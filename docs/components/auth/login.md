@@ -3,7 +3,9 @@
 > This is the component that implements the login UI and logic. 
 
 ## Examples
-*@TODO*
+```vue
+<bklo-components-auth-login @onSuccess="alert('Welcome!')" />
+```
 
 ## Props
 | Name | Type | Default | Required | Description |
@@ -31,7 +33,7 @@
 | onSubmit | data | Called when the submit button is clicked and there are no validation errors. |
 | onInvalid | errors | Fired when the login process can't start for login validation errors. |
 | onFails | errors | Fired when the login process fails. |
-| onLogged | data | Fired when the login process succeded. |
+| onSuccess | data | Fired when the login process succeded. |
 
 ## Slots
 | Name | Description |

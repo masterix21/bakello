@@ -3,7 +3,9 @@
 > This is the component that implements the password change UI and logic. 
 
 ## Examples
-@TODO
+```vue
+<bklo-components-auth-password-change @onSuccess="alert('Password changed!')" />
+```
 
 ## Props
 | Name | Type | Default | Required | Description |
@@ -29,7 +31,7 @@
 | onSubmit | data | Called when the submit button is clicked and there are no validation errors. |
 | onInvalid | errors | Fired when the reset process can't start for data validation errors. |
 | onFails | errors | Fired when the reset process fails. |
-| onPasswordChanged | data | Fired when the password change succeded. |
+| onSuccess | data | Fired when the password change succeded. |
 
 ## Slots
 | Name | Description |
