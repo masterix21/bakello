@@ -21,6 +21,7 @@
 | confirmPasswordEmpty | string | Your email address | no | Confirm password field placeholder. |
 | changeText | string | Change your password | no | Reset password button text. |
 | changeUrl | string | /password/reset | no | Reset password POST url: it will use standard Laravel login route by default. |
+| submitClass | string, object | null | no | Submit button class |
 | submit | Promise | null | no | Override component password change submit function. |
 | hideFooter | bool | false | no | Hide the component footer. |
 | validations | object | { email: { required, email }, password: { required, sameAs: sameAs('confirmPassword') }, confirmPassword: { required, sameAs: sameAs('password') } } | no | Validate model using Vuelidate |
