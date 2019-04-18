@@ -15,6 +15,10 @@
 | resetUrl | string | /password/reset | no | Reset password POST url: it will use standard Laravel login route by default. |
 | loginText | string | Sign In | no | Login button text. |
 | loginUrl | string | /login | no | Login POST url: it will use standard Laravel login route by default. |
+| submit | Promise | null | no | Override component password reset submit function. |
+| hideFooter | bool | false | no | Hide the component footer. |
+| validations | object | { email: { required, email } } | no | Validate model using Vuelidate |
+
 
 ## Events
 | Name | Params | Description |
