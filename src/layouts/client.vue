@@ -17,11 +17,7 @@
                     />
 
                     <slot name="header-menu">
-                        <a class="h-full border-b-4 border-grey-light px-8 flex items-center justify-center cursor-pointer">
-                            <img src="https://lorempixel.com/36/36/people" class="border-2 rounded-full align-middle mr-2" />
-                            <p class="hidden sm:inline-block text-sm text-grey-dark">Luca Longo</p>
-                            <i class="fas fa-angle-down text-xs ml-2 mt-1 text-grey-dark"></i>
-                        </a>
+                        <bklo-c-menu-user />
                     </slot>
                 </div>
             </div>
@@ -89,8 +85,10 @@
 </template>
 
 <script>
+import BkloCMenuUser from '../components/menu/user';
 export default {
     name: 'bklo-layouts-client',
+    components: { BkloCMenuUser },
     props: {
         sidebarClasses: {
             type: Array,
