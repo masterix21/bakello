@@ -3,7 +3,14 @@
 > Form element like input (default) and others.
 
 ## Examples
-*@TODO*
+```vue
+<bklo-components-form-element 
+    :label="First name" 
+    :attribute="first_name" 
+    placeholder="Type your name" 
+    v-model="first_name" 
+    :validator="$v.first_name" />
+```
 
 ## Props
 | Name | Type | Default | Required | Description |
