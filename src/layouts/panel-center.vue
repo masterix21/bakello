@@ -10,6 +10,6 @@
 
 <script>
 export default {
-    name: 'bklo-layouts-panel-center',
+    name: 'bklo-l-panel-center',
 };
 </script>
