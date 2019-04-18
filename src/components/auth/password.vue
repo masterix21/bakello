@@ -99,7 +99,7 @@ export default {
                     data = data.data;
                 }
 
-                this.$emit('onResetted', data);
+                this.$emit('onSuccess', data);
             }).catch(error => {
                 this.$emit('onFails', error);
             });

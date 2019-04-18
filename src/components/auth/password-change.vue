@@ -31,7 +31,7 @@
     import BkloComponentsFormElement from '../form/Element';
 
     export default {
-        name: 'bklo-password-change',
+        name: 'bklo-components-auth-password-change',
         components: { BkloComponentsFormElement, BkloCopyrightFooter },
         props: {
             emailLabel: { type: String, default: 'E-mail' },
@@ -98,7 +98,7 @@
                         data = data.data;
                     }
 
-                    this.$emit('onPasswordChanged', data);
+                    this.$emit('onSuccess', data);
                 }).catch(error => {
                     this.$emit('onFails', error);
                 });

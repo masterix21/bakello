@@ -122,7 +122,7 @@ export default {
                     data = data.data;
                 }
 
-                this.$emit('onLogged', data);
+                this.$emit('onSuccess', data);
             }).catch(error => {
                 this.$emit('onFails', error);
             });
