@@ -4,6 +4,6 @@
 
 <script>
 export default {
-    name: 'bklo-copyright-footer',
+    name: 'bklo-c-copyright-footer',
 };
 </script>

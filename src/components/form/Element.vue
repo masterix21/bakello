@@ -27,7 +27,7 @@
 import { singleErrorExtractorMixin } from 'vuelidate-error-extractor';
 
 export default {
-    name: 'bklo-components-form-element',
+    name: 'bklo-c-form-element',
     mixins: [singleErrorExtractorMixin],
     props: {
         label: String,

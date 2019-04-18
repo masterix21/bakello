@@ -2,7 +2,7 @@
     <div>
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST" onsubmit="return false;">
             <div class="mb-2">
-                <bklo-components-form-element
+                <bklo-c-form-element
                     v-model="email"
                     :label="emailLabel"
                     :placeholder="emailEmpty"
@@ -33,8 +33,8 @@
                 </router-link>
             </div>
         </form>
-        <slot v-if="hideFooter" name="footer">
-            <bklo-copyright-footer />
+        <slot v-if="!hideFooter" name="footer">
+            <bklo-c-copyright-footer />
         </slot>
     </div>
 </template>
@@ -42,12 +42,12 @@
 <script>
 import axios from 'axios';
 import { required, email } from 'vuelidate/lib/validators';
-import BkloCopyrightFooter from '../CopyrightFooter';
-import BkloComponentsFormElement from '../form/Element';
+import BkloCCopyrightFooter from '../CopyrightFooter';
+import BkloCFormElement from '../form/Element';
 
 export default {
-    name: 'bklo-components-auth-password',
-    components: { BkloComponentsFormElement, BkloCopyrightFooter },
+    name: 'bklo-c-auth-password',
+    components: { BkloCFormElement, BkloCCopyrightFooter },
     props: {
         emailLabel: { type: String, default: 'E-mail' },
         emailField: { type: String, default: 'email' },
