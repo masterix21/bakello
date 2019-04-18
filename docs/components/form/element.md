@@ -4,7 +4,7 @@
 
 ## Examples
 ```vue
-<bklo-components-form-element 
+<bklo-c-form-element 
     :label="First name" 
     :attribute="first_name" 
     placeholder="Type your name" 

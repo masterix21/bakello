@@ -4,7 +4,7 @@
 
 ## Examples
 ```vue
-<bklo-components-auth-password @onSuccess="alert('Please check your mailbox!')" />
+<bklo-c-auth-password @onSuccess="alert('Please check your mailbox!')" />
 ```
 
 ## Props

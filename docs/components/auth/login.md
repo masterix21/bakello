@@ -4,7 +4,7 @@
 
 ## Examples
 ```vue
-<bklo-components-auth-login @onSuccess="alert('Welcome!')" />
+<bklo-c-auth-login @onSuccess="alert('Welcome!')" />
 ```
 
 ## Props

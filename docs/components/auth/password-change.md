@@ -4,7 +4,7 @@
 
 ## Examples
 ```vue
-<bklo-components-auth-password-change @onSuccess="alert('Password changed!')" />
+<bklo-c-auth-password-change @onSuccess="alert('Password changed!')" />
 ```
 
 ## Props
