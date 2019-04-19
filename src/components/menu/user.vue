@@ -34,7 +34,7 @@
             }
         },
         data: () => ({
-            opened: true
+            opened: false
         }),
         methods: {
 
