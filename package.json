@@ -7,8 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.js -o dev/styles.css",
-    "docs-dev": "vuepress dev docs",
-    "docs-build": "vuepress build docs",
+    "docs-dev": "vuepress dev dev/docs",
+    "docs-build": "vuepress build ./dev/docs --dest=./docs",
     "format": "prettier --config ./.prettierrc --write 'src/**/*.{css,js,vue}'"
   },
   "dependencies": {
