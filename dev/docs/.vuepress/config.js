@@ -8,7 +8,7 @@ module.exports = {
         docsRepo: 'masterix21/bakello',
         docsDir: 'docs',
         editLinks: true,
-        editLinkText: 'Help us improve this page!',
+        editLinkText: 'Help us to improve this page!',
         nav: [
             { text: 'Home', link: '/' },
         ],
