@@ -5,11 +5,8 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
+# install bakello
+npm install bakello
 ```
 
 For a detailed explanation on how things work, check out the [guide](https://bakello.ambita.it).
