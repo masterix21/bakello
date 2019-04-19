@@ -1,6 +1,5 @@
 <template>
-    <div class="container">
-
+    <div class="container flex flex-col h-screen">
         <div class="flex w-screen h-16">
             <div class="w-16 sm:w-16 md:w-48 bg-black items-center justify-center text-grey shadow border-b-4 border-grey-darker">
                 <slot name="header-logo">
@@ -23,8 +22,8 @@
             </div>
         </div>
 
-        <div class="flex w-screen h-screen bg-grey">
-            <div :class="['h-screen hidden sm:block sm:w-16 md:w-48', sidebarClasses]">
+        <div class="flex w-screen bg-grey flex-grow">
+            <div :class="['hidden sm:block sm:w-16 md:w-48', sidebarClasses]">
                 <slot name="menu-left">
                     <ul class="list-reset text-grey-dark pt-5 pb-5 leading-loose">
                         <li class="text-sm">
@@ -75,11 +74,9 @@
                     </ul>
                 </slot>
             </div>
-
-            <div class="flex-1 bg-grey-lighter w-screen h-screen p-8">
+            <div class="flex-1 bg-grey-lighter w-screen p-8">
                 CONTENUTO
             </div>
-
         </div>
     </div>
 </template>
