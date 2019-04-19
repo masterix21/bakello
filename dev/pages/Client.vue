@@ -1,7 +1,7 @@
 <template>
     <bklo-l-client :sidebarClasses="['bg-gradient-b-grey-darkest-to-darker']">
         <bklo-c-menu-user slot="header-menu" display-name="Ciro"/>
-        <bklo-c-menu-sidebar slot="menu-left" :items="sidebarMenuItems">
+        <bklo-c-menu-sidebar slot="left-menu" :items="sidebarMenuItems">
 
         </bklo-c-menu-sidebar>
     </bklo-l-client>

@@ -25,7 +25,7 @@
 
         <div class="flex w-screen bg-grey flex-grow">
             <div :class="['sm:block sm:w-16 md:w-48', ...sidebarClasses, {'hidden': !sidebarOpened, 'absolute mb-0 shadow-lg': sidebarOpened}]">
-                <slot name="menu-left"></slot>
+                <slot name="left-menu"></slot>
             </div>
             <div class="flex-1 bg-grey-lighter w-screen p-8">
                 <slot name="content"><i class="text-orange-light">
