@@ -57,7 +57,7 @@
                     text: 'Warehouse',
                     icon: 'fas fa-box-open',
                     children: [{
-                        text: 'Transport documents',
+                        text: 'Transport docs',
                         icon: 'fas fa-people-carry',
                         url: '/'
                     }, {
