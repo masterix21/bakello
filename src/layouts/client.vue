@@ -15,83 +15,41 @@
                             class="flex-1 h-full px-4 border-b-4 focus:outline-none focus:bg-white focus:border-purple text-lg focus:text-purple"
                     />
 
-                    <slot name="header-menu">
-                        <bklo-c-menu-user />
-                    </slot>
+                    <slot name="header-menu"></slot>
                 </div>
             </div>
         </div>
 
         <div class="flex w-screen bg-grey flex-grow">
             <div :class="['hidden sm:block sm:w-16 md:w-48', sidebarClasses]">
-                <slot name="menu-left">
-                    <ul class="list-reset text-grey-dark pt-5 pb-5 leading-loose">
-                        <li class="text-sm">
-                        <span class="font-bold text-white uppercase border-b border-grey-darker pt-3 pb-3 pl-5 pr-5 flex hover:text-grey hover:border-white cursor-pointer"
-                        ><i class="text-xl md:text-xs fas fa-address-card mr-2 mt-2"></i><span class="sm:hidden md:block ">Anagrafiche</span></span
-                        >
-                            <ul
-                                    class="list-reset text-sm text-grey-light bg-grey-dark border-b border-grey-dark pt-2 pb-2 pl-5 pr-5 hidden"
-                            >
-                                <li><i class="fas fa-users text-xs mr-2"></i> Clienti</li>
-                                <li><i class="fas fa-tags text-xs mr-2"></i> Prodotti</li>
-                            </ul>
-                        </li>
-                        <li class="text-sm">
-                        <span class="font-bold text-white uppercase bg-grey-darker border-b border-grey-darker pt-3 pb-3 pl-5 pr-5 flex hover:text-grey hover:border-white cursor-pointer"
-                        ><i class="text-xl md:text-xs  fas fa-store mr-2 mt-2"></i><span class=" sm:hidden md:block">Vendita</span></span
-                        >
-
-                            <ul class="list-reset hidden md:block text-sm text-grey-light bg-grey-dark border-b border-grey-dark pt-2 pb-2 pl-5 pr-5">
-                                <li><i class="fas fa-fire text-xs mr-2"></i> Preventivi</li>
-                                <li><i class="fas fa-piggy-bank text-xs mr-2"></i> Ordini</li>
-                            </ul>
-                        </li>
-                        <li class="text-sm">
-                        <span class="font-bold text-white uppercase border-b border-grey-darker pt-3 pb-3 pl-5 pr-5 flex hover:text-grey hover:border-white cursor-pointer"
-                        ><i class="text-xl md:text-xs fas fa-cash-register mr-2 mt-2"></i> <span class=" sm:hidden md:block ">Contabilit&agrave;</span></span
-                        >
-
-                            <ul
-                                    class="list-reset text-sm text-grey-light bg-grey-dark border-b border-grey-dark pt-2 pb-2 pl-5 pr-5 hidden"
-                            >
-                                <li><i class="fas fa-euro-sign text-xs mr-2"></i> Fatture</li>
-                                <li><i class="fab fa-creative-commons-nc-eu text-xs mr-2"></i> Note credito</li>
-                            </ul>
-                        </li>
-                        <li class="text-sm">
-                        <span class="font-bold text-white uppercase border-b border-grey-darker pt-3 pb-3 pl-5 pr-5 flex hover:text-grey hover:border-white cursor-pointer"
-                        ><i class="text-xl md:text-xs  fas fa-box-open mr-2 mt-2"></i><span class=" sm:hidden md:block ">Magazzino</span></span
-                        >
-
-                            <ul
-                                    class="list-reset text-sm text-grey-light bg-grey-dark border-b border-grey-dark pt-2 pb-2 pl-5 pr-5 hidden"
-                            >
-                                <li><i class="fas fa-people-carry text-xs mr-2"></i> DDT</li>
-                                <li><i class="fas fa-warehouse text-xs mr-2"></i> Giacenze</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </slot>
+                <slot name="menu-left"></slot>
             </div>
             <div class="flex-1 bg-grey-lighter w-screen p-8">
-                CONTENUTO
+                <slot name="content"><i class="text-orange-light">
+                    WARNING:</i>&nbsp;<i class="text-grey">add a component to client content :-)</i>
+                </slot>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import BkloCMenuUser from '../components/menu/user';
 export default {
-    name: 'bklo-layouts-client',
-    components: { BkloCMenuUser },
+    name: 'bklo-l-client',
+    components: { },
     props: {
         sidebarClasses: {
             type: Array,
             default: () => ['bg-grey-darkest'],
-        },
+        }
     },
+    data: () => ({ }),
+    computed: {
+
+    },
+    methods: {
+
+    }
 };
 </script>
 
