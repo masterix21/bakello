@@ -10,12 +10,12 @@
                     </a>
                 </slot>
             </div>
-            <div class="flex-1 bg-grey-light">
+            <div class="flex-wrap flex-1 bg-grey-light">
                 <div class="h-16 bg-white flex items-center shadow">
                     <input
                             type="text"
                             placeholder="Ricerca..."
-                            class="flex-1 h-full px-4 border-b-4 focus:outline-none focus:bg-white focus:border-purple text-lg focus:text-purple"
+                            class="flex-1 h-full px-4 border-b-4 focus:outline-none focus:bg-white focus:border-purple text-sm sm:text-lg focus:text-purple"
                     />
 
                     <slot name="header-menu"></slot>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="flex w-screen bg-grey flex-grow">
-            <div :class="['sm:block sm:w-16 md:w-48', ...sidebarClasses, {'hidden': !sidebarOpened, 'absolute mb-0': sidebarOpened}]">
+            <div :class="['sm:block sm:w-16 md:w-48', ...sidebarClasses, {'hidden': !sidebarOpened, 'absolute mb-0 shadow-lg': sidebarOpened}]">
                 <slot name="menu-left"></slot>
             </div>
             <div class="flex-1 bg-grey-lighter w-screen p-8">
