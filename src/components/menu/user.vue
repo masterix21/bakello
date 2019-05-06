@@ -9,7 +9,7 @@
             <slot name="menu"></slot>
             <ul class="list-reset text-xs sm:text-sm">
                 <li v-for="(item, index) in items" :key="index" class="text-white border border-grey-dark border-t-1 border-b-0 border-l-0 border-r-0 py-3 px-4 hover:text-grey-dark hover:border-grey-light">
-                    <a :class="[ 'cursor-pointer', ...itemClass ]">
+                    <a @click="item.action" :class="[ 'cursor-pointer', ...itemClass ]">
                         <i v-if="item.icon" :class="['mr-2', ...item.icon]"></i> {{item.text}}
                     </a>
                 </li>

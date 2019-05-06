@@ -4,7 +4,14 @@
 
 ## Examples
 ```vue
-<bklo-c-menu-user displayName="John Doe" :logout="() => $route.to('/')" />
+<bklo-c-menu-user displayName="John Doe" 
+    :items="[{ 
+        icon: 'far fa-user', 
+        text: 'Profile', 
+        action: () => alert('Edit profile clicked!') 
+    }]" 
+    :logout="() => $route.to('/')" 
+    />
 ```
 
 ## Props
