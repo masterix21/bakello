@@ -14,7 +14,7 @@
                 <div class="h-16 bg-white flex items-center shadow">
                     <input
                             type="text"
-                            placeholder="Ricerca..."
+                            :placeholder="searchEmpty"
                             class="flex-1 h-full px-4 border-b-4 focus:outline-none focus:bg-white focus:border-purple text-sm sm:text-lg focus:text-purple"
                     />
 
@@ -41,6 +41,8 @@ export default {
     name: 'bklo-l-client',
     components: { },
     props: {
+        searchEmpty: { type: String, default: 'Search...' },
+        search: { type: Function, default: null },
         sidebarClasses: {
             type: Array,
             default: () => (['bg-grey-darkest']),

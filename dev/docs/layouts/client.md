@@ -15,6 +15,8 @@
 ## Props
 | Name | Type | Default | Required | Description |
 |------|------|---------|----------|-------------|
+| searchEmpty | string | Search... | no | Search text field placeholder |
+| search | Function | null | no | Search function that will be executed on each search |
 | sidebarClasses | string, array | Username | no | Username field label. |
 
 ## Slots
