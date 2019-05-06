@@ -12,6 +12,8 @@
 |------|------|---------|----------|-------------|
 | avatar | string | https://lorempixel.com/36/36/people | no | URL to avatar image. If empty, shown a random image from Lorempixel.com |
 | displayName | string | null | no | User first name and/or last name (or anything else) |
+| items | array | null | no | Other menu items |
+| itemClass | string, array | null | Class for other menu items |
 | logoutText | string | Logout | no | Input type field (eg. text, number, etc) |
 | logoutClass | string, array | null | Class for logout link |
 | logout | Function | null | yes | Function called when an user clicks on Logout link |
