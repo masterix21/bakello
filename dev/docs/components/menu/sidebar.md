@@ -12,11 +12,11 @@ data: () => ({
         children: [{
             text: 'Customers',
             icon: 'fas fa-users',
-            url: '/'
+            action: '/'
         }, {
             text: 'Products',
             icon: 'fas fa-tags',
-            url: '/'
+            action: '/'
         }]
     }, {
         text: 'Sales',
@@ -24,11 +24,11 @@ data: () => ({
         children: [{
             text: 'Quotes',
             icon: 'fas fa-fire',
-            url: '/'
+            action: '/'
         }, {
             text: 'Orders',
             icon: 'fas fa-piggy-bank',
-            url: '/'
+            action: '/'
         }]
     }] 
 })

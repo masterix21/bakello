@@ -28,8 +28,9 @@
                 <slot name="left-menu"></slot>
             </div>
             <div class="flex-1 bg-grey-lighter w-screen p-8">
-                <slot name="content"><i class="text-orange-light">
-                    WARNING:</i>&nbsp;<i class="text-grey">add a component to client content :-)</i>
+                <slot name="content">
+                    <i class="text-orange-light">WARNING:</i>&nbsp;
+                    <i class="text-grey">add a component to client content :-)</i>
                 </slot>
             </div>
         </div>
