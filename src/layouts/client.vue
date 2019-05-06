@@ -2,13 +2,13 @@
     <div class="container flex flex-col h-screen">
         <div class="flex w-screen h-16">
             <div class="w-16 sm:w-16 md:w-48 bg-black items-center justify-center text-grey shadow border-b-4 border-grey-darker">
-                <slot name="header-logo">
-                    <div class="text-center text-xs p-2 sm:p-5 sm:text-sm md:text-base">Logo</div>
+                <div class="text-center text-xs p-2 sm:p-5 sm:text-sm md:text-base">
+                    <slot name="header-logo">Logo</slot>
+                </div>
 
-                    <a @click="sidebarOpened = !sidebarOpened;" class="block sm:hidden text-center text-2xl">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </slot>
+                <a @click="sidebarOpened = !sidebarOpened;" class="block sm:hidden text-center text-2xl">
+                    <i class="fas fa-bars"></i>
+                </a>
             </div>
             <div class="flex-wrap flex-1 bg-grey-light">
                 <div class="h-16 bg-white flex items-center shadow">
