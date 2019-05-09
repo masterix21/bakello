@@ -1,12 +1,12 @@
 <template>
-    <label :class="['block text-grey-darker text-sm font-bold', { 'text-red-dark': hasErrors }, ...labelClass]">
+    <label :class="['block text-grey-darker text-sm font-bold', { 'text-red-dark': validator && hasErrors }, ...labelClass]">
         {{ label }}
 
         <slot>
             <input
                 :class="[
                     'shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline',
-                    { 'border-red': hasErrors },
+                    { 'border-red': validator && hasErrors },
                     ...inputClass,
                 ]"
                 :type="type"
@@ -15,7 +15,7 @@
             />
         </slot>
 
-        <div class="errors" v-if="hasErrors">
+        <div class="errors" v-if="validator && hasErrors">
             <p class="text-red text-xs" v-for="(error, index) in activeErrorMessages" :key="'error-' + index">
                 <i>{{ error }}</i>
             </p>
