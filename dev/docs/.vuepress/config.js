@@ -15,15 +15,34 @@ module.exports = {
         sidebar: [
             '/',
             {
-                title: 'Components',
+                title: 'Auth',
                 collapsable: false,
                 children: [
-                    ['/components/auth/login', 'Auth - Login'],
-                    ['/components/auth/password', 'Auth - Password reset'],
-                    ['/components/auth/password-change', 'Auth - Password change'],
-                    ['/components/form/element', 'Form - Element'],
-                    ['/components/menu/user', 'Menu - Header User'],
-                    ['/components/menu/sidebar', 'Menu - Sidebar']
+                    ['/components/auth/login', 'Login'],
+                    ['/components/auth/password', 'Password reset'],
+                    ['/components/auth/password-change', 'Password change'],
+                ]
+            },
+            {
+                title: 'Form',
+                collapsable: false,
+                children: [
+                    ['/components/form/element', 'Element'],
+                ]
+            },
+            {
+                title: 'Menu',
+                collapsable: false,
+                children: [
+                    ['/components/menu/user', 'Header User'],
+                    ['/components/menu/sidebar', 'Sidebar'],
+                ]
+            },
+            {
+                title: 'Other',
+                collapsable: false,
+                children: [
+                    ['/components/table', 'Table']
                 ]
             },
             {

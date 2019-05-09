@@ -47,7 +47,7 @@ data: () => ({
 |------|------|---------|----------|-------------|
 | cols | array,string | [] | yes | Table columns. Can be a string with column separated by ";" |
 | rows | array | [] | yes | Table rows |
-| empty-data-text | String | No rows | Empty string shown when rows array is empty |
+| empty-data-text | String | no | No rows | Empty string shown when rows array is empty |
 | striped | boolean | true | no | Table with striped rows |
 
 
