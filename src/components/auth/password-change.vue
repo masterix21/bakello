@@ -55,8 +55,8 @@
 <script>
 import axios from 'axios';
 import { required, email, sameAs } from 'vuelidate/lib/validators';
-import BkloCCopyrightFooter from '../CopyrightFooter';
-import BkloCFormElement from '../form/Element';
+import BkloCCopyrightFooter from '../copyright-footer';
+import BkloCFormElement from '../form/element';
 
 export default {
     name: 'bklo-c-auth-password-change',

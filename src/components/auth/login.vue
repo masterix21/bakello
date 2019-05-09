@@ -51,9 +51,9 @@
 
 <script>
 import axios from 'axios';
-import BkloCCopyrightFooter from '../CopyrightFooter';
+import BkloCCopyrightFooter from '../copyright-footer';
 import { required } from 'vuelidate/lib/validators';
-import BkloCFormElement from '../form/Element';
+import BkloCFormElement from '../form/element';
 
 export default {
     name: 'bklo-c-auth-login',
