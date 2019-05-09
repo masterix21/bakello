@@ -42,6 +42,7 @@ module.exports = {
                 title: 'Other',
                 collapsable: false,
                 children: [
+                    ['/components/card', 'Card'],
                     ['/components/table', 'Table']
                 ]
             },
