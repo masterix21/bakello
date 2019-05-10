@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-2">
+    <div class="mt-4">
         <a v-for="(val, index) in values" @click="$emit('input', val.value)" :class="['cursor-pointer text-base', radioColor(val.value), {'ml-3': index != 0}]">
             <i v-if="value == val.value" class="far fa-check-circle"></i>
             <i v-else class="far fa-circle"></i>
