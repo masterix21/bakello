@@ -28,6 +28,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     ['/components/form/element', 'Element'],
+                    ['/components/form/radio', 'Radio'],
                 ]
             },
             {
