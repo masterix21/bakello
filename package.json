@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.js -o dev/styles.css",
+    "dev-tailwind-build": "npx tailwind build dev/tailwind.css -c dev/tailwind.config.js -o dev/styles.css",
     "docs-dev": "vuepress dev dev/docs",
     "docs-build": "vuepress build ./dev/docs --dest=./docs",
     "format": "prettier --config ./.prettierrc --write 'src/**/*.{css,js,vue}'"
@@ -17,7 +17,6 @@
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "lodash": "^4.17.11",
-    "tailwindcss": "^0.7.4",
     "vue": "^2.6.10",
     "vuelidate": "^0.7.4",
     "vuelidate-error-extractor": "^2.4.0"
@@ -31,6 +30,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "sass-loader": "^7.1.0",
+    "tailwindcss": "^1.0.0",
     "tailwindcss-gradients": "^1.1.0",
     "vue-router": "^3.0.3",
     "vue-template-compiler": "^2.5.21"

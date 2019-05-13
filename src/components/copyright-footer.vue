@@ -1,5 +1,5 @@
 <template>
-    <p class="text-center text-grey-darker text-xs">©2019 Bakello. All rights reserved.</p>
+    <p class="text-center text-gray-700 text-xs">©2019 Bakello. All rights reserved.</p>
 </template>
 
 <script>

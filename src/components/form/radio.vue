@@ -12,8 +12,8 @@
     export default {
         name: "bklo-c-form-radio",
         props: {
-            checkedColor: { type: String, default: 'text-grey-darkest' },
-            uncheckedColor: { type: String, default: 'text-grey' },
+            checkedColor: { type: String, default: 'text-gray-800' },
+            uncheckedColor: { type: String, default: 'text-gray-600' },
             values: {
                 type: Array,
                 default: () => ([ ])

@@ -23,7 +23,7 @@
             <div class="flex items-center justify-between">
                 <button
                     :class="[
-                        'bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+                        'bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
                         { 'opacity-50 cursor-not-allowed': invalidForm },
                         ...submitClass,
                     ]"
@@ -34,7 +34,7 @@
                 </button>
                 <router-link
                     :class="[
-                        'inline-block align-baseline font-bold text-sm text-grey-darker hover:text-blue-darker no-underline',
+                        'inline-block align-baseline font-bold text-sm text-gray-600 hover:text-blue-600 no-underline',
                         ...resetClass,
                     ]"
                     :to="resetUrl"

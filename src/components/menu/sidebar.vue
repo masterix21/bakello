@@ -2,14 +2,14 @@
     <div>
         <slot name="above" />
 
-        <ul v-if="items && items.length > 0" class="list-reset text-grey-dark pt-5 pb-5 leading-loose">
+        <ul v-if="items && items.length > 0" class="list-reset text-gray-700 pt-5 pb-5 leading-loose">
             <li v-for="(item, index) in items" :key="'sidebar-menu-item-'+ index" class="text-sm">
-                <a @click="handleClick(item, index)" class="font-bold text-white uppercase border-b border-grey-darker pt-3 pb-3 pl-5 pr-5 flex hover:text-grey hover:border-white cursor-pointer">
+                <a @click="handleClick(item, index)" class="font-bold text-white uppercase border-b border-gray-600 pt-3 pb-3 pl-5 pr-5 flex hover:text-gray-600 hover:border-white cursor-pointer">
                     <i v-if="item.icon" :class="['text-xl md:text-xs mr-2 mt-2', ...item.icon]"></i>
-                    <span class="sm:hidden md:block ">{{item.text}}</span>
+                    <span class="sm:hidden md:block">{{item.text}}</span>
                 </a>
 
-                <ul v-if="hasChildren(item)" :class="['list-reset text-sm text-grey-light bg-grey-dark border-b border-grey-dark pt-2 pb-2 pl-5 pr-5', {'hidden': selectedItem != index}]">
+                <ul v-if="hasChildren(item)" :class="['list-reset text-sm text-gray-400 bg-gray-700 border-b border-gray-900 pt-2 pb-2 pl-5 pr-5', {'hidden': selectedItem != index}]">
                     <li v-for="(child, child_index) in item.children" :key="'sidebar-menu-item-'+ index +'+'+ child_index">
                         <a @click="handleClick(item, index)">
                             <i v-if="child.icon" :class="['text-xs mr-2', ...child.icon]"></i> {{child.text}}
