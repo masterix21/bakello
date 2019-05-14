@@ -4,17 +4,17 @@
             <slot name="thead">
                 <thead>
                     <tr>
-                        <th v-for="(col, index) in _cols" :key="index" :class="['p-3 border-b-2 border-grey-light text-grey-darkest text-left', ...col.class, columnVisibility(col)]">
+                        <th v-for="(col, index) in _cols" :key="index" :class="['p-3 border-b-2 border-gray-400 text-gray-600 text-left', ...col.class, columnVisibility(col)]">
                             {{col.text || ''}}
                         </th>
-                        <th v-if="actions && actions.length > 0" :class="['p-3 border-b-2 border-grey-light text-grey-darkest text-left w-16 sm:w-32']"></th>
+                        <th v-if="actions && actions.length > 0" :class="['p-3 border-b-2 border-gray-400 text-gray-600 text-left w-16 sm:w-32']"></th>
                     </tr>
                 </thead>
             </slot>
             <slot v-if="rows.length > 0" name="tbody">
                 <tbody>
-                    <tr v-for="(item, index) in rows" :key="index" :class="[{'bg-grey-lighter': striped && index % 2}]">
-                        <td v-for="(col, index) in _cols" :key="index" :class="['p-3 text-grey-darker', columnVisibility(col), ...col.class]">
+                    <tr v-for="(item, index) in rows" :key="index" :class="[{'bg-gray-100': striped && index % 2}]">
+                        <td v-for="(col, index) in _cols" :key="index" :class="['p-3 text-gray-600', columnVisibility(col), ...col.class]">
                             <slot :name="'row-col-'+ col.key" :item="item">{{ renderColumnValue(col, item) }}</slot>
                         </td>
                         <td v-if="actions && actions.length > 0" class="text-center px-2">
@@ -28,7 +28,7 @@
             </slot>
             <tbody v-else>
                 <tr>
-                    <td :colspan="_cols.length" class="p-4 text-center text-grey-dark">
+                    <td :colspan="_cols.length" class="p-4 text-center text-gray-600">
                         {{ emptyDataText }}
                     </td>
                 </tr>

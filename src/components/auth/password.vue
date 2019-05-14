@@ -13,7 +13,7 @@
             <div class="flex items-center justify-between">
                 <button
                     :class="[
-                        'bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+                        'bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
                         { 'opacity-50 cursor-not-allowed': invalidForm },
                         ...submitClass,
                     ]"
